@@ -6,6 +6,8 @@ public class BadPickup : MonoBehaviour
 {
 
     public int scoreSubtracted;
+    public float TimeLive;
+    public float Timer;
     public float rotationSpeedX;
     public float rotationSpeedY;
     public float rotationSpeedZ;
@@ -21,6 +23,11 @@ public class BadPickup : MonoBehaviour
     void Update()
     {
         transform.Rotate(rotationSpeedX * 3, rotationSpeedY * 3, rotationSpeedZ * 3);
+        TimeLive += Time.deltaTime;
+        if (TimeLive >= Timer)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter(Collider other)

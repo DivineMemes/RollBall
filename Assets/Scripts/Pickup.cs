@@ -5,6 +5,8 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     public int scoreAdded;
+    public float TimeLive;
+    public float Timer;
     public float rotationSpeedX;
     public float rotationSpeedY;
     public float rotationSpeedZ;
@@ -20,6 +22,11 @@ public class Pickup : MonoBehaviour
     void Update()
     {
         transform.Rotate(rotationSpeedX * 3, rotationSpeedY * 3, rotationSpeedZ * 3);
+        TimeLive += Time.deltaTime;
+        if(TimeLive >= Timer)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter(Collider other)

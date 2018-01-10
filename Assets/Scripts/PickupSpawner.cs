@@ -20,7 +20,6 @@ public class PickupSpawner : MonoBehaviour
         float randX = Random.Range(-range,range);
         float randZ = Random.Range(-range, range);
         spawnedPickUp.transform.position = transform.position + new Vector3(randX, 0, randZ);
-        spawnedPickUp.GetComponent<Pickup>().scoreAdded = Random.Range(-5, 30);
     }
     // Update is called once per frame
 	void Update ()

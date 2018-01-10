@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreAdded: 1
+  TimeLive: 0
+  Timer: 5
   rotationSpeedX: 0
   rotationSpeedY: 0
   rotationSpeedZ: 0
